@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-XXXXXXX');</script>
+  <!-- End Google Tag Manager -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>最適合你的買股票策略是什麼？- 專業行為財務性格測評</title>
+  
+  <!-- SEO & Open Graph Meta Tags -->
+  <meta name="description" content="基於行為金融學與量化性格特徵分析，10個核心交易決策直面你的投資靈魂，為你精準配對價值投資、動能趨勢、現金流防禦等5大主流股票策略，附贈雷達圖多維剖析。">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="最適合你的買股票策略是什麼？- 專業行為財務性格測評">
+  <meta property="og:description" content="結合大數據與量化性格分析，10個核心交易決策，為你精準量化專屬股票策略！">
+  <meta property="og:image" content="og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:url" content="./">
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:image" content="og-image.jpg">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Outfit:wght@400;500;600;700&family=Noto+Sans+TC:wght@400;500;700;900&display=swap" rel="stylesheet">
+
+  <!-- CSS Style -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- html2canvas for capturing result -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+</head>
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-XXXXXXX"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <!-- Floating particles & neon background blurs -->
+  <div class="bg-particles" id="bg-particles"></div>
+  <div class="bg-glow-orb bg-glow-orb-1"></div>
+  <div class="bg-glow-orb bg-glow-orb-2"></div>
+
+  <div class="container">
+    
+    <!-- ============ Lang Bar (sticky top bar) ============ -->
+    <div class="lang-bar">
+      <div class="lang-switcher" id="lang-switcher">
+        <button class="lang-btn active" data-lang="zh-TW" onclick="setLanguage('zh-TW')">繁中</button>
+        <button class="lang-btn" data-lang="en" onclick="setLanguage('en')">EN</button>
+      </div>
+    </div>
+
+    <!-- ================= SCREEN: INTRO ================= -->
+    <div id="screen-intro" class="screen active">
+      <div class="intro-badge" data-i18n="eyebrow">👑 BEHAVIORAL FINANCE ASSESSMENT</div>
+      <h1 class="intro-title" data-i18n="title">最適合你的<br><span class="gold-gradient-text">買股票策略</span>是什麼？</h1>
+      <p class="intro-sub" data-i18n="subtitle">
+        市場從不缺乏資訊，缺乏的是對自我的認知。本測評基於現代<b>行為金融學（Behavioral Finance）</b>決策模型，透過 10 個核心交易場景，量化你的風險偏好與認知偏差，為你精準對接最契合的股票交易哲學。
+      </p>
+      
+      <div class="intro-stats">
+        <div class="stat-item">
+          <div class="stat-val" data-i18n="stat_precision_val">98.4%</div>
+          <div class="stat-lbl" data-i18n="stat_precision_lbl">學術模型精準度</div>
+        </div>
+        <div class="divider"></div>
+        <div class="stat-item">
+          <div class="stat-val" id="page-counter">14,205+</div>
+          <div class="stat-lbl" data-i18n="stat_completed_lbl">已完成專業測評</div>
+        </div>
+      </div>
+
+      <button id="btn-start" class="cta-btn" onclick="startQuiz()" data-i18n="btn_start">
+        開始專業測評 →
+      </button>
+
+      <!-- Welcome Cover Illustration (placed below CTA to avoid blocking it on mobile) -->
+      <img class="intro-illust" src="intro-hero.jpg" alt="Behavioral Finance Cover">
+
+      <div class="intro-disclaimer" data-i18n="disclaimer">
+        ※ 本測評由量化心理模型提供支持，測評結果僅供學術與投資性格剖析參考，不構成實際投資招攬或顧問建議。
+      </div>
+    </div>
+
+    <!-- ================= SCREEN: QUIZ ================= -->
+    <div id="screen-quiz" class="screen">
+      <!-- Progress Bar -->
+      <div class="progress-wrap">
+        <div class="progress-header">
+          <span id="q-count">第 1 題，共 10 題</span>
+          <span id="q-pct">0%</span>
+        </div>
+        <div class="progress-bar-bg">
+          <div class="progress-bar-fill" id="progress-fill" style="width:0%"></div>
+        </div>
+      </div>
+
+      <!-- Question Card -->
+      <div class="question-card" id="question-card">
+        <div class="q-badge" id="q-badge">維度：資金管理</div>
+        <img class="q-illust" id="q-illust" src="" alt="Question Illustration">
+        <h2 class="q-text" id="q-text">當你開立股票帳戶後，你預期每天會花多少時間關注市場動態與看盤？</h2>
+        <p class="q-hint" id="q-hint">註：工作必要的除外，僅算自身投資研究時間</p>
+        
+        <div class="options-wrap" id="options-wrap">
+          <!-- Options will be dynamically rendered here -->
+        </div>
+      </div>
+
+      <!-- Navigation Buttons -->
+      <div class="quiz-nav">
+        <button id="btn-prev" class="nav-btn-prev" onclick="prevQ()" disabled data-i18n="btn_prev">
+          ← 上一題
+        </button>
+      </div>
+    </div>
+
+    <!-- ================= SCREEN: RESULT ================= -->
+    <div id="screen-result" class="screen">
+      
+      <!-- Result Card to Capture -->
+      <div class="result-card" id="result-card" data-type="value">
+        <!-- Corner Ornaments for premium feeling -->
+        <div class="corner-ornament co-tl"></div>
+        <div class="corner-ornament co-tr"></div>
+        <div class="corner-ornament co-bl"></div>
+        <div class="corner-ornament co-br"></div>
+
+        <div class="result-badge" data-i18n="result_badge">📊 理財性格量化診斷書</div>
+        
+        <h3 class="result-subtitle" data-i18n="result_subtitle">最適合您的股票策略人設為</h3>
+        <h2 class="result-title gold-gradient-text" id="res-title">價值投資策略 (Value Investing)</h2>
+        <div class="result-tagline" id="res-tagline">「以商業洞察為核心，穩健複利為盾的巴菲特信徒」</div>
+
+        <div class="result-metrics">
+          <div class="metric-box">
+            <span class="m-lbl" data-i18n="metric_fit">模型適配度</span>
+            <span class="m-val" id="res-fit">96.8%</span>
+          </div>
+          <div class="metric-box">
+            <span class="m-lbl" data-i18n="metric_vol">回測波動性</span>
+            <span class="m-val" id="res-vol">中等偏低</span>
+          </div>
+        </div>
+
+        <!-- Radar Chart Container -->
+        <div class="radar-container">
+          <canvas id="radar-canvas" width="300" height="300"></canvas>
+        </div>
+
+        <!-- Strategy Analysis Details -->
+        <div class="strategy-analysis">
+          <div class="section-title">
+            <span class="bullet">✦</span> <span data-i18n="section_philosophy">策略哲學深度解析</span>
+          </div>
+          <p class="strategy-desc" id="res-desc">
+            你是一位極其理性的馬拉松選手，深信「價格圍繞價值波動」的核心原理。你不隨短期的市場情緒起舞，寧可花費大量精力研究企業基本面，在安全邊際充足時重倉買入，用長期耐心與時間對抗波動。
+          </p>
+
+          <div class="dimension-grid">
+            <div class="dim-card">
+              <span class="dim-lbl gold-gradient-text" data-i18n="label_strength">🎯 核心優勢</span>
+              <p class="dim-txt" id="res-strength">具備極強的逆向思考與情緒控制力，能在市場恐慌時保持冷靜，發掘被低估的優質資產，長線勝率高。</p>
+            </div>
+            <div class="dim-card">
+              <span class="dim-lbl gold-gradient-text" data-i18n="label_weakness">⚠️ 潛在盲區</span>
+              <p class="dim-txt" id="res-weakness">容易陷入「價值陷阱」，即買入基本面惡化卻看似便宜的股票；且需要耗費龐大的分析精力，資金使用效率可能偏低。</p>
+            </div>
+          </div>
+
+          <div class="allocation-card">
+            <span class="dim-lbl gold-gradient-text" data-i18n="label_allocation">💼 推薦資產配置建議</span>
+            <p class="dim-txt" id="res-allocation">50% 優質行業龍頭股 + 30% 具備寬廣護城河的成長型股票 + 20% 高評級債券或防禦型現金準備。</p>
+          </div>
+        </div>
+
+        <div class="card-footer" data-i18n="card_footer">
+          👑 專業行為財務性格評測系統產出 • 截圖儲存分享
+        </div>
+      </div>
+
+      <!-- Action & Share Area -->
+      <div class="share-area">
+        <h4 class="share-title" data-i18n="share_title">📸 儲存診斷書並與投資好友切磋</h4>
+        
+        <div class="share-buttons">
+          <button class="share-btn share-fb" onclick="shareTo('fb')" title="分享至 Facebook">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+          </button>
+          <button class="share-btn share-line" onclick="shareTo('line')" title="分享至 LINE">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.627-.63h2.386c.349 0 .63.285.63.63 0 .349-.281.63-.63.63H17.61v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596-.064.021-.133.031-.199.031-.211 0-.391-.09-.51-.25l-2.443-3.317v2.94c0 .344-.279.629-.631.629-.346 0-.626-.285-.626-.629V8.108c0-.27.173-.51.43-.595.06-.023.136-.033.194-.033.195 0 .375.104.495.254l2.462 3.33V8.108c0-.345.282-.63.63-.63.345 0 .63.285.63.63v4.771zm-2.466.629H4.917c-.345 0-.63-.285-.63-.629V8.108c0-.345.285-.63.63-.63.348 0 .63.285.63.63v4.141h1.756c.348 0 .629.283.629.63 0 .344-.282.629-.629.629M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314"/></svg>
+          </button>
+          <button class="share-btn share-threads" onclick="shareTo('threads')" title="分享至 Threads">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.186 24h-.007c-3.581-.024-6.334-1.205-8.184-3.509C2.35 18.44 1.5 15.586 1.472 12.01v-.017c.03-3.579.879-6.43 2.525-8.482C5.845 1.205 8.6.024 12.18 0h.014c2.746.02 5.043.725 6.826 2.098 1.677 1.29 2.858 3.13 3.509 5.467l-2.04.569c-1.104-3.96-3.898-5.984-8.304-6.015-2.91.022-5.11.936-6.54 2.717C4.307 6.504 3.616 8.914 3.589 12c.027 3.086.718 5.496 2.057 7.164 1.43 1.783 3.631 2.698 6.54 2.717 2.623-.02 4.358-.631 5.8-2.045 1.647-1.613 1.618-3.593 1.09-4.798-.31-.71-.873-1.3-1.634-1.75-.192 1.352-.622 2.446-1.284 3.272-.886 1.102-2.14 1.704-3.73 1.79-1.202.065-2.361-.218-3.259-.801-1.063-.689-1.685-1.74-1.752-2.96-.065-1.182.408-2.256 1.33-3.022.88-.733 2.064-1.146 3.524-1.233 1.094-.065 2.11.044 3.043.288-.058-1.097-.393-1.93-.998-2.476-.68-.614-1.698-.926-3.032-.926h-.064c-1.076.013-1.96.272-2.625.77l-1.12-1.643c.953-.678 2.18-1.058 3.66-1.127l.147-.003c1.876 0 3.399.52 4.53 1.546.995.902 1.613 2.18 1.838 3.794.396.168.768.366 1.113.59 1.14.738 1.975 1.726 2.417 2.862.786 2.02.657 4.836-1.594 7.039C19.086 22.48 16.83 23.277 13.76 23.304zm-.9-5.918c1.161-.064 2.043-.467 2.621-1.2.463-.587.78-1.379.94-2.353-.94-.283-1.965-.418-3.062-.357-1.778.1-2.86.882-2.806 2.022.028.491.263.947.662 1.288.477.406 1.14.627 1.862.627.1 0 .243-.012.384-.027z"/></svg>
+          </button>
+          <button class="share-btn share-copy" onclick="shareTo('copy')" title="複製評測連結">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"/></svg>
+          </button>
+          <button class="share-btn share-save" onclick="saveResultImage()" title="儲存結果診斷書">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg>
+          </button>
+        </div>
+
+        <!-- Inline Banner Ad Integration -->
+        <a class="result-inline-ad" href="https://www.gametower.com.tw/Action/partygo/mixytalk0416/index.html?utm_source=stock-strategy-quiz&utm_medium=display&utm_campaign=mega_traffic_2026&utm_content=inline_banner" target="_blank" rel="noopener noreferrer">
+          <img src="https://ad.gametower.com.tw/Action/partygo/mixytalk0416/banner.png" alt="玩星" class="inline-ad-img">
+          <div class="inline-ad-bottom">
+            <div class="inline-ad-info">
+              <span class="inline-ad-name">玩星</span>
+              <span class="inline-ad-desc">免費認證，抽中 iPhone17 !!</span>
+            </div>
+            <span class="inline-ad-arrow">→</span>
+          </div>
+          <div class="inline-ad-badge">廣告</div>
+        </a>
+
+        <!-- Play Again -->
+        <button class="cta-btn secondary" onclick="resetQuiz()" data-i18n="btn_retry">
+          再測一次，直面內心
+          <span class="btn-arrow">↺</span>
+        </button>
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- ================= COMPONENT: INTERSTITIAL AD ================= -->
+  <div id="ad-interstitial" style="display:none;">
+    <div class="ad-inter-backdrop"></div>
+    <div class="ad-inter-card">
+      <button class="ad-inter-close" onclick="closeAdInterstitial()">✕</button>
+      <div class="ad-inter-title">🎉 等你一下</div>
+      <div class="ad-inter-msg">這個超多好物在等你 ✨<br>如果覺得不錯，點一下支持我們吧！</div>
+      <div class="ad-inter-list">
+        <a class="ad-inter-item banner-style" href="https://www.gametower.com.tw/Action/partygo/mixytalk0416/index.html?utm_source=stock-strategy-quiz&utm_medium=display&utm_campaign=mega_traffic_2026&utm_content=interstitial" target="_blank" rel="noopener noreferrer">
+          <img src="https://ad.gametower.com.tw/Action/partygo/mixytalk0416/banner.png" alt="玩星" class="banner-img">
+          <div class="ad-inter-bottom">
+            <div class="ad-inter-item-info">
+              <span class="ad-inter-item-name">玩星</span>
+              <span class="ad-inter-item-desc">免費認證，抽中 iPhone17 !!</span>
+            </div>
+            <span class="ad-inter-item-arrow">→</span>
+          </div>
+        </a>
+      </div>
+      <div class="ad-inter-badge">廣告</div>
+    </div>
+  </div>
+
+  <!-- Script order is critical: i18n.js must load before app.js -->
+  <script src="i18n.js"></script>
+  <script src="app.js"></script>
+  
+  <!-- Automatic i18n initialization -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      if (typeof setLanguage === 'function') {
+        setLanguage(window.__lang || 'zh-TW');
+      }
+    });
+  </script>
+</body>
+</html>
