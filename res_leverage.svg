@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="100%" height="100%">
+  <defs>
+    <linearGradient id="gold-base" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4E3606" />
+      <stop offset="30%" stop-color="#A27D23" />
+      <stop offset="50%" stop-color="#FFE79A" />
+      <stop offset="70%" stop-color="#D4AF37" />
+      <stop offset="100%" stop-color="#3D2905" />
+    </linearGradient>
+    <linearGradient id="gold-bevel" x1="100%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" stop-color="#FFF8D6" />
+      <stop offset="50%" stop-color="#D4AF37" />
+      <stop offset="100%" stop-color="#7B5C0D" />
+    </linearGradient>
+    <linearGradient id="topaz" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FCDDBC" />
+      <stop offset="50%" stop-color="#E67E22" />
+      <stop offset="100%" stop-color="#873A03" />
+    </linearGradient>
+    <radialGradient id="goldGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FFA800" stop-opacity="0.3" />
+      <stop offset="100%" stop-color="#FFA800" stop-opacity="0" />
+    </radialGradient>
+    <radialGradient id="shieldBg" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#2D2214" />
+      <stop offset="100%" stop-color="#0E0803" />
+    </radialGradient>
+    <filter id="shadow">
+      <feDropShadow dx="0" dy="10" stdDeviation="8" flood-color="#000" flood-opacity="0.8" />
+    </filter>
+  </defs>
+
+  <g filter="url(#shadow)">
+    <!-- Medallion Shield -->
+    <circle cx="200" cy="200" r="170" fill="url(#shieldBg)" stroke="url(#gold-base)" stroke-width="8" />
+    <circle cx="200" cy="200" r="160" fill="url(#goldGlow)" />
+    <circle cx="200" cy="200" r="150" fill="none" stroke="url(#gold-bevel)" stroke-width="2" stroke-dasharray="10,8" />
+    <circle cx="200" cy="200" r="140" fill="none" stroke="url(#gold-base)" stroke-width="3" />
+
+    <!-- Monkey Head -->
+    <circle cx="200" cy="190" r="50" fill="url(#gold-base)" stroke="url(#gold-bevel)" stroke-width="5" />
+    <circle cx="200" cy="190" r="45" fill="url(#gold-bevel)" opacity="0.3" />
+
+    <!-- Ears -->
+    <circle cx="140" cy="180" r="18" fill="url(#gold-base)" stroke="url(#gold-bevel)" stroke-width="3" />
+    <circle cx="260" cy="180" r="18" fill="url(#gold-base)" stroke="url(#gold-bevel)" stroke-width="3" />
+
+    <!-- Face Mask Inner Shape -->
+    <path d="M165 180 C165 155 200 155 200 170 C200 155 235 155 235 180 C235 210 200 230 200 230 C200 230 165 210 165 180 Z" fill="#140F08" stroke="url(#gold-bevel)" stroke-width="2" />
+
+    <!-- Cheeky Eyes (Wink!) -->
+    <circle cx="185" cy="182" r="5" fill="url(#gold-bevel)" />
+    <path d="M210 182 Q218 175 225 182" fill="none" stroke="url(#gold-bevel)" stroke-width="3" stroke-linecap="round" />
+
+    <!-- Cheeky Smile -->
+    <path d="M188 206 Q200 216 212 206" fill="none" stroke="url(#gold-bevel)" stroke-width="3" stroke-linecap="round" />
+
+    <!-- Topaz Crown -->
+    <path d="M175 142 L185 110 L200 98 L215 110 L225 142" fill="none" stroke="url(#gold-bevel)" stroke-width="3" />
+    <rect x="188" y="93" width="24" height="24" rx="4" fill="url(#topaz)" stroke="url(#gold-bevel)" stroke-width="3" transform="rotate(45 200 105)" />
+
+    <!-- Golden Dice -->
+    <rect x="160" y="245" width="25" height="25" rx="4" fill="url(#gold-base)" stroke="url(#gold-bevel)" stroke-width="3" transform="rotate(-15 172.5 257.5)" />
+    <circle cx="170" cy="255" r="2.5" fill="url(#gold-bevel)" />
+    <circle cx="175" cy="263" r="2.5" fill="url(#gold-bevel)" />
+    
+    <rect x="215" y="245" width="25" height="25" rx="4" fill="url(#gold-base)" stroke="url(#gold-bevel)" stroke-width="3" transform="rotate(15 227.5 257.5)" />
+    <circle cx="227" cy="257" r="3" fill="url(#gold-bevel)" />
+  </g>
+</svg>

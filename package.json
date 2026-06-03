@@ -1,6 +1,8 @@
 {
   "dependencies": {
+    "@gradio/client": "^2.2.1",
     "jimp": "^1.6.1",
-    "localtunnel": "^2.0.2"
+    "localtunnel": "^2.0.2",
+    "sharp": "^0.34.5"
   }
 }

@@ -11,203 +11,198 @@ window.__lang = (function() {
   }
 })();
 
-// 2. Language-independent results metadata
+// 2. Language-independent results metadata (6 Outcomes)
 const _resultMeta = {
-  passive: { type: "passive", min: 0, max: 6, fit: "98.5%", scores: { FUD: 35, TEC: 10, PAT: 98, RIS: 65, SPD: 10 } },
-  dividend: { type: "dividend", min: 7, max: 12, fit: "96.4%", scores: { FUD: 85, TEC: 25, PAT: 90, RIS: 40, SPD: 20 } },
-  value: { type: "value", min: 13, max: 19, fit: "97.2%", scores: { FUD: 98, TEC: 18, PAT: 88, RIS: 55, SPD: 30 } },
-  momentum: { type: "momentum", min: 20, max: 25, fit: "95.8%", scores: { FUD: 30, TEC: 95, PAT: 30, RIS: 75, SPD: 88 } },
-  short: { type: "short", min: 26, max: 30, fit: "98.1%", scores: { FUD: 20, TEC: 98, PAT: 10, RIS: 98, SPD: 98 } }
+  passive: { type: "passive", min: 0, max: 5, fit: "98.5%", scores: { FUD: 25, TEC: 15, PAT: 98, RIS: 30, SPD: 10 } },
+  dividend: { type: "dividend", min: 6, max: 10, fit: "96.4%", scores: { FUD: 85, TEC: 20, PAT: 90, RIS: 40, SPD: 15 } },
+  value: { type: "value", min: 11, max: 15, fit: "97.2%", scores: { FUD: 98, TEC: 25, PAT: 85, RIS: 55, SPD: 20 } },
+  momentum: { type: "momentum", min: 16, max: 20, fit: "95.8%", scores: { FUD: 30, TEC: 80, PAT: 40, RIS: 75, SPD: 90 } },
+  short: { type: "short", min: 21, max: 25, fit: "98.1%", scores: { FUD: 15, TEC: 95, PAT: 15, RIS: 90, SPD: 98 } },
+  leverage: { type: "leverage", min: 26, max: 30, fit: "99.2%", scores: { FUD: 20, TEC: 98, PAT: 10, RIS: 98, SPD: 98 } }
 };
 
 // 3. Translation database
 window.__i18n = {
   ui: {
     'zh-TW': {
-      eyebrow: '👑 專業行為財務性格評測',
-      title: '最適合你的<br><span class="gold-gradient-text">買股票策略</span>是什麼？',
-      subtitle: '市場從不缺乏資訊，缺乏的是對自我的認知。本測評基於現代<b>行為金融學（Behavioral Finance）</b>決策模型，透過 10 個核心交易場景，量化你的風險偏好與認知偏差，為你精準對接最契合的股票交易哲學。',
+      eyebrow: '👑 股市生存性格趣味測評',
+      title: '最適合你的<br><span class="gold-gradient-text">股票交易風格</span>是什麼？',
+      subtitle: '買股票是修行，也是博弈！本測評用 10 個趣味的日常股市抉擇，幫你解鎖靈魂深處的股市戰士人格，看你到底是穩健大師，還是槓桿狂魔！',
       stat_precision_val: '98.4%',
-      stat_precision_lbl: '學術模型精準度',
+      stat_precision_lbl: '大數據模型吻合度',
       stat_completed_val: '14,205+',
-      stat_completed_lbl: '已完成專業測評',
-      btn_start: '開始專業測評 →',
-      disclaimer: '※ 本測評由量化心理模型提供支持，測評結果僅供學術與投資性格剖析參考，不構成實際投資招攬或顧問建議。',
+      stat_completed_lbl: '已完成趣味測評',
+      btn_start: '開始測評，直面內心 →',
+      disclaimer: '※ 本測評為趣味性格剖析，不構成實際投資招攬、財務顧問或具體買賣建議。投資有風險，下單需謹慎。',
       
       // Quiz Screen
       q_count: function(n, total) { return `第 ${n} 題，共 ${total} 題`; },
       btn_prev: '← 上一題',
       
       // Result Screen
-      result_badge: '📊 理財性格量化診斷書',
-      result_subtitle: '最適合您的股票策略人設為',
-      metric_fit: '模型適配度',
+      result_badge: '📊 股市人格量化診斷書',
+      result_subtitle: '最適合您的股票交易風格人設為',
+      metric_fit: '適配百分比',
       metric_vol: '回測波動性',
-      section_philosophy: '✦ 策略哲學深度解析',
-      label_strength: '🎯 核心優勢',
-      label_weakness: '⚠️ 潛在盲區',
-      label_allocation: '💼 推薦資產配置建議',
+      section_philosophy: '🔮 投資人格「內心大白話」',
       card_footer: '👑 專業行為財務性格評測系統產出 • 截圖儲存分享',
       share_title: '📸 儲存診斷書並與投資好友切磋',
-      btn_retry: '再測一次，直面內心 ↺',
+      btn_retry: '再測一次，命運翻盤 ↺',
       btn_saving: '產生中...',
       toast_copy: '✅ 評測連結已複製至剪貼簿！',
       toast_save_fail: '⚠️ 自動下載失敗，請直接手動螢幕截圖儲存！',
       
       // Ads & Sharing Text
       share_text: function(res) {
-        return `我完成了投資策略評測，最適合我的股票交易策略人設是【${res.title}】！快來量化你的投資心理基因吧 📈`;
+        return `我完成了股市交易風格測評，最適合我的股票戰士人設是【${res.title}】！快來看看你的股市基因是什麼吧 📈`;
       }
     },
     'en': {
-      eyebrow: '👑 BEHAVIORAL FINANCE ASSESSMENT',
-      title: 'What\'s Your Optimal<br><span class="gold-gradient-text">Stock Strategy</span>?',
-      subtitle: 'Markets are filled with noise; clarity starts with self-awareness. Based on modern <b>Behavioral Finance</b> decision models, this assessment gauges your risk preferences and cognitive biases to align you with your optimal trading philosophy.',
+      eyebrow: '👑 STOCK INVESTOR PERSONALITY QUIZ',
+      title: 'What\'s Your True<br><span class="gold-gradient-text">Stock Trading Style</span>?',
+      subtitle: 'Investing is a journey of self-discovery. Answer 10 fun stock-market scenarios to reveal your inner trader profile—from passive indexing masters to high-stakes leverage warlords!',
       stat_precision_val: '98.4%',
-      stat_precision_lbl: 'Model Precision',
+      stat_precision_lbl: 'Data Model Fit Rate',
       stat_completed_val: '14,205+',
       stat_completed_lbl: 'Assessments Done',
-      btn_start: 'Start Assessment →',
-      disclaimer: '* Powered by quantitative psychology. For educational & personality profiling only; not actual investment advice.',
+      btn_start: 'Start Quiz, Reveal Yourself →',
+      disclaimer: '* For educational & entertainment profiling only; not actual investment advice. Trading stocks involves risk.',
       
       // Quiz Screen
       q_count: function(n, total) { return `Question ${n} of ${total}`; },
       btn_prev: '← Previous',
       
       // Result Screen
-      result_badge: '📊 QUANTITATIVE FINANCIAL PROFILE',
-      result_subtitle: 'YOUR STOCK STRATEGY PROFILE IS',
-      metric_fit: 'Model Fit',
+      result_badge: '📊 TRADER QUANT DIAGNOSTIC PROFILE',
+      result_subtitle: 'YOUR STOCK TRADER PROFILE IS',
+      metric_fit: 'Match Percentage',
       metric_vol: 'Backtest Volatility',
-      section_philosophy: '✦ Deep Strategy Philosophy',
-      label_strength: '🎯 Core Advantages',
-      label_weakness: '⚠️ Potential Blindspots',
-      label_allocation: '💼 Recommended Asset Allocation',
+      section_philosophy: '🔮 Your Trading Soul in Plain English',
       card_footer: '👑 Produced by Behavioral Finance Profiler • Save & Share',
       share_title: '📸 Save Your Diagnostic Profile & Share with Friends',
-      btn_retry: 'Retake Assessment ↺',
+      btn_retry: 'Retake Quiz, Rewrite Destiny ↺',
       btn_saving: 'Generating...',
       toast_copy: '✅ Assessment link copied to clipboard!',
       toast_save_fail: '⚠️ Auto-download failed, please take a screenshot!',
       
       // Ads & Sharing Text
       share_text: function(res) {
-        return `I just completed the Behavioral Finance Stock Strategy Assessment! My optimal strategy profile is 【${res.title}】! Quantify your investment DNA here: `;
+        return `I just completed the Stock Trading Style Quiz! My optimal strategy profile is 【${res.title}】! Quantify your trading DNA here: `;
       }
     }
   },
   
   questions: {
-    'zh-TW': null, // populated below from active memory
+    'zh-TW': null, // populated dynamically from app.js memory on load
     'en': [
       {
-        badge: "1. Monitor Frequency",
-        text: "Once your stock account is open, how much time do you expect to spend monitoring and analyzing the market daily?",
-        hint: "Note: Exclude general news browsing; count only active portfolio research time.",
+        badge: "1. App Checking",
+        text: "After buying a stock, how often do you open your trading app?",
+        hint: "Honest answer only—no judging!",
         options: [
-          { label: "Barely monitor; set up auto-contributions or check quarterly", score: 0 },
-          { label: "Spend 10-15 mins checking account & dividend releases after market close", score: 1 },
-          { label: "Spend 1-2 hours studying financial reports, industry news, and stock metrics", score: 2 },
-          { label: "Watch the screen closely during trading hours, focusing on bid-ask spreads & real-time charts", score: 3 }
+          { label: "Rarely. Set up auto-invest, delete the app, check back in 6 months.", score: 0 },
+          { label: "Once or twice a day, mostly checking if cash dividends hit the account.", score: 1 },
+          { label: "After market close, carefully reading corporate earnings and metrics.", score: 2 },
+          { label: "Keep it open all day, my heart racing with every red and green candle.", score: 3 }
         ]
       },
       {
         badge: "2. Crash Response",
-        text: "If your core holding crashes by 20% due to irrational market panic, what is your first reaction?",
-        hint: "Note: Be honest with your instinct, rather than giving a textbook answer.",
+        text: "If your core holding suddenly plunges 10% in a single day, your first reaction is...",
+        hint: "Imagine it actually happening to you today!",
         options: [
-          { label: "Indifferent; trust that the broad market index will recover in the long run", score: 0 },
-          { label: "Reassured as long as dividend payouts hold; buy more to accumulate yield", score: 1 },
-          { label: "Re-evaluate intrinsic value; if fundamentals are intact, view it as a great bargain to buy more", score: 2 },
-          { label: "Sell immediately to cut losses; wait for clear signs of bottoming out before buying back", score: 3 }
+          { label: "Shrug. I do long-term monthly index savings anyway; time to play dead.", score: 0 },
+          { label: "Awesome! Lower price means higher dividend yield. Buying more to collect dividends!", score: 1 },
+          { label: "Calmly analyze valuation models. If it's cheap, I buy more to lower cost.", score: 2 },
+          { label: "Panic! The sky is falling! Cut losses and sell everything now to protect my cash.", score: 3 }
         ]
       },
       {
         badge: "3. Stock Selection",
-        text: "When picking a stock, what is the single most critical criterion you evaluate?",
-        hint: "Note: Which attribute takes absolute priority in your investment process?",
+        text: "What trait attracts you most when picking a new stock?",
+        hint: "Your absolute first priority.",
         options: [
-          { label: "Index representation and low management fees; matching market returns is best", score: 0 },
-          { label: "Dividend history, current dividend yield, and healthy free cash flows", score: 1 },
-          { label: "P/E ratio, P/B ratio, ROE, and whether a long-term 'business moat' exists", score: 2 },
-          { label: "Trading volume, bullish moving average alignment, chart breakouts, and institutional flows", score: 3 }
+          { label: "A super popular, giant index ETF that helps me sleep peacefully.", score: 0 },
+          { label: "A legendary track record of paying out dividends every single year.", score: 1 },
+          { label: "A rock-solid industry competitive moat with reasonable valuation.", score: 2 },
+          { label: "Rallying for days with massive breakouts—ready to jump on board immediately.", score: 3 }
         ]
       },
       {
-        badge: "4. Return Expectation",
-        text: "What is your target annual return rate and preferred way of making profits?",
-        hint: "Note: Balancing risk and reward, which profit model brings you peace of mind?",
+        badge: "4. Profit Style",
+        text: "What is your ideal speed and style of making money in stocks?",
+        hint: "Be realistic about your timeline.",
         options: [
-          { label: "Match the long-term historical returns of the broad market (approx. 7-10% annually)", score: 0 },
-          { label: "Secure stable, predictable cash distributions to build passive income (approx. 5-8% annually)", score: 1 },
-          { label: "Discover deeply undervalued companies through research to capture multi-fold capital gains", score: 2 },
-          { label: "Trade volatility actively for high-velocity, short-term wave gains", score: 3 }
+          { label: "Slow compounding matching the broad market index (7-10% a year).", score: 0 },
+          { label: "Steady dividend payments flowing into my bank account like monthly rent.", score: 1 },
+          { label: "Diligent research to find a 10x multibagger growth stock over years.", score: 2 },
+          { label: "Quick swing trading to lock in a 20% gain in a few days.", score: 3 }
         ]
       },
       {
-        badge: "5. Asset Concentration",
-        text: "How do you prefer to configure your stock portfolio?",
-        hint: "Note: Diversification is heavily correlated with your sleep quality during drawdowns.",
+        badge: "5. Portfolio Setup",
+        text: "If you are given $1 million to invest, how would you allocate it?",
+        hint: "Think about how you distribute risk.",
         options: [
-          { label: "Global or all-market diversification; holding hundreds of stocks with zero single-company bias", score: 0 },
-          { label: "Concentrate in 5-10 stable, high-yield, large-cap blue-chip equities", score: 1 },
-          { label: "Hold 3-5 high-conviction moat companies with a margin of safety for the long haul", score: 2 },
-          { label: "Dynamically adjust holdings and sector weights based on hot themes and technical trends", score: 3 }
+          { label: "Put it all in a broad-market index ETF across hundreds of stocks.", score: 0 },
+          { label: "Pick 5-10 blue-chip giants known for paying safe dividends.", score: 1 },
+          { label: "Concentrate heavily in 3-5 high-conviction growth companies.", score: 2 },
+          { label: "All-in on whichever stock is trending hot on social media today.", score: 3 }
         ]
       },
       {
-        badge: "6. Beating the Market",
-        text: "What is your belief regarding whether individual investors can consistently beat the market?",
-        hint: "Note: This shapes whether you take a passive indexing posture or active hunting stance.",
+        badge: "6. Beating Market",
+        text: "Do you believe retail investors can consistently beat the market?",
+        hint: "Your core market philosophy.",
         options: [
-          { label: "Markets are highly efficient; active stock picking is futile, passive index tracking is optimal", score: 0 },
-          { label: "Beating the market doesn't matter; obtaining secure, steady cash flow is what counts", score: 1 },
-          { label: "Markets are often driven by sentiment; disciplined research uncovers outstanding alphas", score: 2 },
-          { label: "Markets move in waves; riding technical momentum with quick exits captures high gains", score: 3 }
+          { label: "No. Markets are efficient. Sticking to index funds is the best.", score: 0 },
+          { label: "Doesn't matter. Collecting cash dividends is the only real win.", score: 1 },
+          { label: "Yes, deep fundamental research exploits market inefficiencies.", score: 2 },
+          { label: "Yes, by reading technical charts and following hot capital flows.", score: 3 }
         ]
       },
       {
-        badge: "7. Reading Preferences",
-        text: "What type of financial information or research do you follow most closely?",
-        hint: "Note: Your information diet reveals your core decision-making logic.",
+        badge: "7. Media Diet",
+        text: "What kind of financial information do you read most often?",
+        hint: "What gets you excited to read?",
         options: [
-          { label: "Rarely follow individual stocks; read books on asset allocation and indexing", score: 0 },
-          { label: "Track ex-dividend dates, corporate debt ratings, and quarterly dividend ETF configurations", score: 1 },
-          { label: "Scrutinize annual reports, earnings call transcripts, supply chain logic, and competitor metrics", score: 2 },
-          { label: "Study candlesticks, moving averages, MACD/RSI signals, and daily broker chip flows", score: 3 }
+          { label: "Rarely check individual stocks, only read about asset allocation and passive indexing.", score: 0 },
+          { label: "Dividend calendar releases and high-yield index component updates.", score: 1 },
+          { label: "Corporate earnings reports, supply chain logic, and conference calls.", score: 2 },
+          { label: "Technical analysis videos, RSI/MACD charts, and breakout alerts.", score: 3 }
         ]
       },
       {
-        badge: "8. Trade Decision Timeline",
-        text: "From discovering a stock to clicking the 'buy' button, how long does your decision take?",
-        hint: "Note: Reflected in your analytical restraint versus execution speed.",
+        badge: "8. Purchase Decision",
+        text: "From hearing about a stock to clicking 'Buy', how long does it take?",
+        hint: "Reflects your patience versus impulse.",
         options: [
-          { label: "Set up recurring auto-buys; no active buy decision is required", score: 0 },
-          { label: "Monitor for weeks, analyzing yields, and waiting for an undervalued entry price", score: 1 },
-          { label: "Invest weeks or months in rigorous valuation and research, buying only when safety is high", score: 2 },
-          { label: "Act immediately within minutes or seconds once volume surge or technical breakout is spotted", score: 3 }
+          { label: "Instant. It's automated monthly. Zero manual decisions.", score: 0 },
+          { label: "A few weeks. Calculate dividend yields and wait for a dip.", score: 1 },
+          { label: "Weeks of deep valuation research before putting cash in.", score: 2 },
+          { label: "Seconds! Once I see a breakout volume, I hit the buy button.", score: 3 }
         ]
       },
       {
-        badge: "9. Leverage & Derivatives",
-        text: "What is your fundamental stance on margin, options, futures, or leveraged ETFs?",
-        hint: "Note: Leverage can be a toxic poison or a powerful accelerator based on risk control.",
+        badge: "9. Leverage View",
+        text: "What is your attitude toward margins, options, and warrants?",
+        hint: "The multiplier effect.",
         options: [
-          { label: "Strictly avoid; investing should be low-risk, long-term, and diversified. Leverage leads to ruin", score: 0 },
-          { label: "Steer clear of leverage; stick to low-beta, defensive stocks even if they seem boring", score: 1 },
-          { label: "Understand these instruments but rarely use them, buying quality stocks with cash", score: 2 },
-          { label: "Use them strategically to boost capital efficiency when trade probabilities are high", score: 3 }
+          { label: "Strictly avoid. Leverage is the fastest way to go bankrupt.", score: 0 },
+          { label: "Never touch. I only buy low-volatility stable assets.", score: 1 },
+          { label: "Understand them but stick to spot trading quality stocks with cash.", score: 2 },
+          { label: "The ultimate wealth accelerator! Max it out on high-conviction trades.", score: 3 }
         ]
       },
       {
-        badge: "10. Core Joy of Investing",
-        text: "In your stock investment journey, what brings you the greatest sense of accomplishment?",
-        hint: "Note: The ultimate psychological payoff you seek from active participation.",
+        badge: "10. Core Joy",
+        text: "What brings you the greatest satisfaction in stock investing?",
+        hint: "The psychological reward you chase.",
         options: [
-          { label: "Peace of mind knowing my wealth is compounding quietly in the background without my effort", score: 0 },
-          { label: "Receiving quarterly dividends, turning payouts directly into passive income stream", score: 1 },
-          { label: "Validating independent analysis when a hidden gem I bought surges after market discovery", score: 2 },
-          { label: "Timing entries and exits accurately, enjoying the execution thrill of active momentum wins", score: 3 }
+          { label: "Peace of mind seeing my assets compound quietly in the background without my effort.", score: 0 },
+          { label: "Receiving dividend notifications and seeing cash hit my account.", score: 1 },
+          { label: "Proving my analysis right when an undervalued hidden gem surges.", score: 2 },
+          { label: "Timing entries and exits perfectly for quick, active trading profits.", score: 3 }
         ]
       }
     ]
@@ -216,96 +211,113 @@ window.__i18n = {
   resultText: {
     'zh-TW': {
       passive: {
-        title: "指數化被動投資策略",
-        tagline: "「抱住全市場，低成本參與人類長期繁榮的被動信仰家」",
-        desc: "您是市場效率假說的堅定信仰者。您深知頻繁交易和主動選股只會被交易成本與認知偏差殘食利潤，因此選擇將資金分散於全市場指數中，追求與世界同步的長線跑程。在市場喧囂中，您能維持泰然心境，不為短期震盪動搖。",
-        vol: "極低且隨大盤",
-        strength: "心力損耗極低，交易摩擦成本幾近於零，長線勝率極高，能徹底避開單一企業倒閉或暴雷的滅頂風險。",
-        weakness: "在大牛市中無法獲得超越大盤的超額報酬（Alpha），策略表現較為平淡無奇；需有極大信念面對漫長的市場熊市。",
-        allocation: "80% 全球股票指數 ETF (如 VT) + 15% 核心公債型 ETF (如 BND) + 5% 無風險現金。"
+        title: "佛系定存大師",
+        tagline: "「抱住全市場，裝死定額的無為信仰家」",
+        desc: "買了直接把 App 刪掉，你就是傳說中的「裝死界天花板」！對你來說，看盤簡直是浪費生命，研究財報像看催眠天書。你最常做的事就是定期定額自動扣款，然後假裝自己根本沒這筆錢。恭喜你，你的交易心態好到可以直接成仙了！",
+        vol: "極低（貼近大盤）",
+        strength: "幾乎不花時間心力，交易手續費極低，長線勝率高達 90% 以上，免除崩盤焦慮。",
+        weakness: "牛市時無法賺取翻倍的超額利潤，過程極度枯燥，且需要信仰挺過長達數年的大熊市。",
+        allocation: "80% 全球大盤 ETF (如 VT/VOO) + 15% 穩健債券 + 5% 現金預備。"
       },
       dividend: {
-        title: "高股息現金流防禦策略",
-        tagline: "「以豐沛配息為盾，無視市場起舞的高效現金流收割者」",
-        desc: "您是極致務實的現金流追求者。您不寄望於虛無飄渺、難以預測的股價波動，而是將核心注意力集中在每期能實實在在進入口袋的股息上。您傾向用高殖利率、獲利穩健的防守型標的打造專屬防禦壁壘，享受穩定的被動收入成長。",
+        title: "定息包租公",
+        tagline: "「以利息為盾，熱愛每季領紅包的現金流收割者」",
+        desc: "股價跌到阿嬤都不認得你也不慌，因為你唯一在乎的是：「配息進帳了沒？」你把股市當成你的自動金雞母，每當股價暴跌，你反而興奮大喊：「又特價了！多買幾張多領利息！」年年躺著領大紅包就是你最大的快樂！",
         vol: "低波動",
-        strength: "具備強大的投資心理韌性，因為每期的實體配息能直接抵消帳面虧損焦慮；在震盪市中能提供非常踏實的防護傘。",
-        weakness: "配息政策可能隨公司營運惡化而中斷，且高配息股常面臨資本利得成長放緩的代價；容易低估重複配息的稅務磨損。",
-        allocation: "60% 高殖利率權值股/優質高股息 ETF + 30% 公用事業/電信產業龍頭 + 10% 貨幣市場定存。"
+        strength: "每期收到的股息能帶來強大的心理安全感，在熊市震盪時最不容易恐慌拋售標的。",
+        weakness: "高配息股通常成長性較弱，容易賺了股息卻賠了差價；且容易低估頻繁配息產生的稅務與手續費摩擦成本。",
+        allocation: "70% 高股息 ETF/穩健權值股 + 20% 公用事業/基礎設施股 + 10% 高利率定存。"
       },
       value: {
-        title: "經典價值成長投資策略",
-        tagline: "「買股票就是買企業，以超凡安全邊際對抗波動的巴菲特信徒」",
-        desc: "您是深具商業洞察力的理性投資人。您深信「價格圍繞價值波動」的核心原理，熱衷於閱讀財務報表、鑽研競爭優勢、建立嚴謹的估值模型。您總是在股價低於內在價值、安全邊際充足時出手重倉買入，並極具耐心地陪伴優質企業成長。",
+        title: "巴菲特傳人",
+        tagline: "「算價值、挖護城河，極具安全邊際的理性評論家」",
+        desc: "你是股市裡的「考古學家」，別人在瘋搶發光發熱的明星股，你偏偏愛去市場的垃圾堆裡挖寶！專門挑被低估的賺錢好公司。你買股票就像大媽去菜市場搶打折菜，不便宜、不劃算你絕對不下單。買完就耐心地跟它談一場天荒地老的戀愛，用超強理智熬死所有投機客！",
         vol: "中等偏低",
-        strength: "買入成本極具安全邊際，抗跌能力強；由於研究紮實，不容易受恐慌情緒影響，中長線常能戰勝大盤，獲取豐厚資本利得。",
-        weakness: "估值模型需要極高專業度與時間精力，且容易落入「價值陷阱」（即便宜的垃圾公司）；持股發酵的等待期可能極其漫長。",
-        allocation: "60% 具備護城河的優質價值龍頭 + 20% 高研發門檻的成長股 + 20% 短期公債以維持流動性。"
+        strength: "買入成本極具防禦力，不易被市場情緒割韭菜；精準選股在中長線常能創造超凡的回報。",
+        weakness: "研究分析極耗心力與財經素養；容易落入「價值陷阱」（即股價便宜但基本面持續惡化），且等待發酵的時期可能無比漫長。",
+        allocation: "60% 具備護城河的優質價值股 + 20% 高研發門檻的成長股 + 20% 短期債券。"
       },
       momentum: {
-        title: "動能追隨與趨勢交易策略",
-        tagline: "「以嚴格紀律為鋼，乘風追逐強勢股浪潮的順勢乘風者」",
-        desc: "您是市場的敏銳獵犬，深知「強者恆強」的動能法則。您不在意抄底，而是透過移動平均線、量價關係、籌碼日報與型態突破，順應趨勢進行中短期的強勢進出。您絕不參與市場盤整或長期走跌，注重資金周轉效率與趨勢利潤最大化。",
+        title: "衝浪急先鋒",
+        tagline: "「踩在風口浪尖，追隨強勢股突破的順勢乘風者」",
+        desc: "「哪裡熱鬧你就往哪裡擠！」你是天生的股市衝浪手，信奉強者恆強。你最討厭買了不動的死魚股，只要看到成交量暴增、股價正在風口上，你就會二話不說踩著浪頭衝進去！一旦發現風向不對，你拍拍屁股溜得比誰都快！",
         vol: "中高波動",
-        strength: "資金利用效率與周轉率極高，在明顯的多頭趨勢中能創造驚人的爆發力；嚴格遵循技術停損，能徹底避開系統性大崩盤。",
-        weakness: "在市場處於無方向的箱型整理（震盪盤）時，極易因為頻繁假突破而反覆停損被「雙巴」；極度考驗交易紀律的鋼鐵意志力。",
-        allocation: "50% 當季強勢題材與法人重倉股 + 30% 大盤動能型 ETF + 20% 現金儲備（維持交易機動性）。"
+        strength: "資金效率極高，在大多頭行情中能實現資金的快速翻倍，絕不參與股票的漫長盤整期。",
+        weakness: "在箱型整理或震盪市場中容易被「假突破」雙向洗盤（雙巴），需要有極強的停損執行力與心理承受力。",
+        allocation: "50% 當季強勢熱門個股 + 30% 動能型 ETF + 20% 機動現金儲備。"
       },
       short: {
-        title: "極短線與主動投機策略",
-        tagline: "「以波動為燃料，在恐懼與貪婪夾縫中奪食的超短線獵手」",
-        desc: "您是交易戰場上的頂尖特種兵。您以劇烈波動為生，穿梭於市場最熱、波動最大的板塊中。您極度重視即時五檔報價、盤中大單、情緒共振與微觀技術線圖，並善用槓桿或衍生性工具在短時間內博取超額利潤，追求當日或極短線的結算。",
+        title: "當沖戰神",
+        tagline: "「以波動為生，在盤中五檔與即時K線搏殺的極短線獵手」",
+        desc: "「手起刀落，賺了就跑！」你是持股絕對不過夜的閃電俠！你的雙眼每天緊盯 K 線的跳動，盤中進去撈一把、賺個便當錢就拍拍屁股收工。半夜美股暴跌、黑天鵝來襲關你屁事？你早就空倉躺平呼呼大睡了。天下武功，唯快不破！",
         vol: "極高波動",
-        strength: "不受任何市場長線利空干擾（如黑天鵝事件的隔夜風險），單次波段獲利極快，具備敏銳無比的盤感與極致的果斷執行力。",
-        weakness: "情緒壓力和精神耗損巨大，手續費與證所稅等摩擦成本驚人；極度考驗專注度，一旦情緒失控未嚴格停損，可能面臨毀滅重創。",
-        allocation: "45% 極高波動個股與期權/期貨 + 35% 熱門題材流動資金 + 20% 絕對安全的定存（保命安全鎖）。"
+        strength: "持倉不過夜，完美規避了美股大跌或半夜突發黑天鵝利空的隔夜風險，資金周轉率快至極致。",
+        weakness: "精神和體力消耗巨大，摩擦成本（手續費、稅金）極高，對心態要求極為嚴苛，一次失控可能導致巨大虧損。",
+        allocation: "50% 熱門當沖波動標的 + 30% 當日週轉流動資金 + 20% 絕對安全的定存。"
+      },
+      leverage: {
+        title: "少年股神",
+        tagline: "「融資期權全開，以小博大、翻轉命運的冒險家」",
+        desc: "「搏一搏，單人房變別墅！」對你來說，慢慢變富簡直是慢性折磨。你的人生字典裡只有「梭哈」與「滿倉全開槓桿」！你看準了就期權、融資通通拉滿，資產要嘛像火箭一樣噴向宇宙，要嘛像流星一樣光速歸零，玩的就是心跳與刺激！",
+        vol: "毀滅性高波動",
+        strength: "在多頭爆發或趨勢明朗時，能用極少本金在短時間內創造十倍、百倍的暴富神話。",
+        weakness: "容錯率極低，一旦市場反向波動，將面臨斷頭、爆倉或權證歸零的滅頂之災，心理承受壓力居全市場之冠。",
+        allocation: "40% 槓桿標的（期權/權證/融資現股） + 40% 流動儲備 + 20% 誓死不動的保命定存。"
       }
     },
     'en': {
       passive: {
-        title: "Passive Indexing Strategy",
-        tagline: "“A long-term global growth indexer holding the world economy”",
-        desc: "You are a staunch believer in the Efficient Market Hypothesis. Understanding that active trading and stock picking often erode returns through high friction costs and behavioral errors, you diversify broadly across whole-market index funds to capture global compounding quietly. Market noise never moves you.",
-        vol: "Very Low (Index Tracking)",
-        strength: "Near-zero effort and friction costs, returns tracking the broad market, and zero risk of single stock default.",
-        weakness: "No outperformance (Alpha) during bull markets; requires absolute discipline to hold index funds through deep recessions.",
-        allocation: "80% Global Equity Index ETF (e.g., VT) + 15% Core Bond ETF (e.g., BND) + 5% Liquid Cash."
+        title: "Zen Index Master",
+        tagline: "“The buy-and-hold passive believer who plays dead to grow wealth”",
+        desc: "You are the ultimate 'play dead' legend. You buy a stock, delete the trading app, and check back in a year. While other investors are panicking, you're sleeping like a baby. Who cares about charts? You're already enlightened!",
+        vol: "Very Low (Index-Matching)",
+        strength: "Zero stress, minimal transaction costs, high long-term historical win rate, and immune to single-company disasters.",
+        weakness: "No outperformance (Alpha) during bull runs; requires iron discipline to hold index funds through multi-year recessions.",
+        allocation: "80% Global Stock Index ETFs (e.g. VT/VOO) + 15% Core Bonds + 5% Emergency Cash."
       },
       dividend: {
-        title: "Dividend & Cash Flow Strategy",
-        tagline: "“A cash flow harvester shielding portfolios with stable payouts”",
-        desc: "You are an extremely pragmatic income investor. Instead of speculating on capital gains, you focus on receiving reliable, tangible cash dividends. You prefer low-beta defensive leaders, letting compounding distributions secure your passive income.",
+        title: "Dividend Landlord",
+        tagline: "“Pragmatic income harvester treating dividends as rental income”",
+        desc: "You don't care if the stock price drops to the center of the earth. Your only question is: 'Did my dividend hit?' While others cry during market crashes, you smile and buy more: 'Yay, discount dividends!' Just like collecting rental income.",
         vol: "Low Volatility",
-        strength: "Outstanding psychological resilience; regular cash distributions offset paper drawdown anxiety and secure steady returns in bear markets.",
-        weakness: "Dividend cuts are possible if corporate earnings deteriorate; high-yield stocks may have slower long-term capital growth.",
-        allocation: "60% High-Yield Equity / Dividend ETFs + 30% Utility/Telecom Leaders + 10% Money Market Funds."
+        strength: "Steady passive income provides great peace of mind, making you highly resilient against panic selling during bear markets.",
+        weakness: "High-yield stocks often have lower capital growth; risk of dividend cuts during earnings recessions; and high tax friction.",
+        allocation: "70% High-Dividend ETFs/Blue-Chips + 20% Defensive Utility Leaders + 10% High-Yield Cash."
       },
       value: {
-        title: "Classic Value Strategy",
-        tagline: "“A Buffett disciple acquiring quality business with safe margins”",
-        desc: "You are a highly analytical, rational investor. Believing that price eventually reflects intrinsic value, you study competitive moats and balance sheets, buying quality companies only when a wide margin of safety is present.",
+        title: "Buffett Disciple",
+        tagline: "“Rational value hunter purchasing quality business with safety margins”",
+        desc: "You are the market archaeologist! While others chase high-flying hype, you dig through the bargain bin with a magnifying glass. You buy stocks like buying discount groceries, and you're ready to hold them until the end of time to outlast all speculators.",
         vol: "Low-Medium Volatility",
-        strength: "Substantial safety margin, excellent risk-adjusted entry prices, and high probability of beating the market in the long haul.",
-        weakness: "Demands extensive research time and financial literacy; risks falling into value traps (cheap but structurally declining companies).",
-        allocation: "60% Moat-driven Value Leaders + 20% High-growth Companies + 20% Short-term Treasuries."
+        strength: "Highly protected by margin of safety; deep research shields you from market panics, yielding excellent risk-adjusted long-term returns.",
+        weakness: "Demands high financial literacy and massive research time; risks falling into value traps (structurally declining cheap stocks)."
       },
       momentum: {
-        title: "Momentum & Trend Strategy",
-        tagline: "“A sharp trend follower riding the strongest market waves”",
-        desc: "You are a sharp momentum follower. Guided by the law of inertia, you ride strong trends using moving averages, breakouts, and institutional flows, prioritizing capital efficiency and moving out of stagnant or falling assets quickly.",
+        title: "Momentum Surfer",
+        tagline: "“Trend hunter chasing breakout patterns and riding explosive waves”",
+        desc: "Wherever the party is, that's where you are! You ride the waves of volume and breakouts, hunting for explosive momentum. If the wind stops blowing, you run faster than anyone else, looking for the next rocket ship.",
         vol: "Medium-High Volatility",
-        strength: "High capital efficiency and turnover; explosive gains during bull runs while cutting losses quickly to sidestep crashes.",
-        weakness: "Vulnerable to whip-saws (getting chopped up) during sideways, volatile markets; demands extreme discipline in executing stops.",
-        allocation: "50% Strong Momentum Stocks + 30% Dynamic Sector ETFs + 20% Cash (held for tactical entries)."
+        strength: "Exceptional capital efficiency; captures explosive upside trends quickly while avoiding dead money during long sideways consolidations.",
+        weakness: "Vulnerable to sudden pullbacks and false breakouts during choppy sideways markets, requiring absolute discipline to cut losses.",
+        allocation: "50% High-Momentum Growth Stocks + 30% Sector ETFs + 20% Tactical Cash."
       },
       short: {
-        title: "Short-term Speculation Strategy",
-        tagline: "“A short-term hunter extracting quick profits from volatility”",
-        desc: "You thrive on high volatility, navigating fast-moving sectors with technical charts, order flows, and market sentiment, using derivatives or leverage to capture intraday fluctuations and closing positions before overnight risks.",
+        title: "Day Trading Warlord",
+        tagline: "“Lightning-fast scalper extracting daily gains from order book ticks”",
+        desc: "You are a financial special forces trader. You trade high-volatility tickers in minutes, grab your daily profits, and close all positions before the bell. Overnight crash? Doesn't affect you—you're already asleep with cash!",
         vol: "Extremely High Volatility",
-        strength: "Zero exposure to overnight macroeconomic black swan events, rapid compounding capability, and outstanding market intuition.",
-        weakness: "High psychological stress and mental fatigue; high friction costs; a single slip in executing stops can result in severe drawdowns.",
-        allocation: "45% Highly Volatile Assets/Derivatives + 35% Tactical Cash + 20% Liquid Savings."
+        strength: "Zero overnight risk from macro black swans or bad earnings; highly active cash compounding; independent of long-term market trends.",
+        weakness: "Severe mental and physical exhaustion; very high commission and tax friction; a single emotional breakdown can wipe out weeks of profits.",
+        allocation: "50% Active Tickers + 30% Daily Operating Capital + 20% Secure Cash Reserves."
+      },
+      leverage: {
+        title: "Leverage Warlord",
+        tagline: "“High-stakes options and margin player chasing exponential growth”",
+        desc: "Slow compounding? Too boring! Your investing motto is 'go big or go home.' You load up on margin and options, aiming to shoot your portfolio to the moon or vaporize it into stardust. You play for the ultimate thrills!",
+        vol: "Ruinous Volatility",
+        strength: "Capable of creating legendary wealth and turning small sums into millions in short periods during clear breakout trends.",
+        weakness: "Extremely low margin for error; a slight adverse market move can lead to margin calls, liquidation, or options expiring worthless.",
+        allocation: "40% Leveraged Assets (Options/Margin) + 40% Secondary Capital + 20% Strict Emergency Cash."
       }
     }
   }

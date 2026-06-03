@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="100%" height="100%">
+  <defs>
+    <!-- Gold Gradients for 3D metallic feel -->
+    <linearGradient id="gold-base" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4E3606" />
+      <stop offset="30%" stop-color="#A27D23" />
+      <stop offset="50%" stop-color="#FFE79A" />
+      <stop offset="70%" stop-color="#D4AF37" />
+      <stop offset="100%" stop-color="#3D2905" />
+    </linearGradient>
+    <linearGradient id="gold-bevel" x1="100%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" stop-color="#FFF8D6" />
+      <stop offset="50%" stop-color="#D4AF37" />
+      <stop offset="100%" stop-color="#7B5C0D" />
+    </linearGradient>
+    <linearGradient id="sapphire" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#5D9CEC" />
+      <stop offset="50%" stop-color="#4A90E2" />
+      <stop offset="100%" stop-color="#1B3A75" />
+    </linearGradient>
+    <radialGradient id="goldGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FFA800" stop-opacity="0.3" />
+      <stop offset="100%" stop-color="#FFA800" stop-opacity="0" />
+    </radialGradient>
+    <radialGradient id="shieldBg" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#2D2214" />
+      <stop offset="100%" stop-color="#0E0803" />
+    </radialGradient>
+    <filter id="shadow">
+      <feDropShadow dx="0" dy="10" stdDeviation="8" flood-color="#000" flood-opacity="0.8" />
+    </filter>
+  </defs>
+
+  <g filter="url(#shadow)">
+    <!-- Medallion Shield (Aztec style) -->
+    <circle cx="200" cy="200" r="170" fill="url(#shieldBg)" stroke="url(#gold-base)" stroke-width="8" />
+    <!-- Glowing background aura inside medallion -->
+    <circle cx="200" cy="200" r="160" fill="url(#goldGlow)" />
+    <!-- Geometric Aztec borders -->
+    <circle cx="200" cy="200" r="150" fill="none" stroke="url(#gold-bevel)" stroke-width="2" stroke-dasharray="10,8" />
+    <circle cx="200" cy="200" r="140" fill="none" stroke="url(#gold-base)" stroke-width="3" />
+
+    <!-- 3D Sloth Golden Statue (Layered for bevel effect) -->
+    <!-- Hanging Gold Branch -->
+    <path d="M60 110 Q200 130 340 110" fill="none" stroke="url(#gold-base)" stroke-width="12" stroke-linecap="round" />
+    <path d="M60 110 Q200 130 340 110" fill="none" stroke="url(#gold-bevel)" stroke-width="6" stroke-linecap="round" />
+
+    <!-- Arms hanging -->
+    <path d="M120 120 C100 160 110 220 140 250 C160 270 240 270 260 250 C290 220 300 160 280 120" fill="none" stroke="url(#gold-base)" stroke-width="16" stroke-linecap="round" />
+    <path d="M120 120 C100 160 110 220 140 250 C160 270 240 270 260 250 C290 220 300 160 280 120" fill="none" stroke="url(#gold-bevel)" stroke-width="8" stroke-linecap="round" />
+
+    <!-- Head Base -->
+    <path d="M140 170 Q130 120 200 100 Q270 120 260 170 C250 220 150 220 140 170 Z" fill="url(#gold-base)" stroke="url(#gold-bevel)" stroke-width="4" stroke-linejoin="round" />
+    <!-- Head Bevel (offset inner shape for 3D look) -->
+    <path d="M145 168 Q138 125 200 108 Q262 125 255 168 C247 212 153 212 145 168 Z" fill="url(#gold-bevel)" opacity="0.4" />
+
+    <!-- Face Plate (Obsidian Black Metal) -->
+    <path d="M155 170 C155 150 175 135 200 135 C225 135 245 150 245 170 C245 190 200 200 200 200 C200 200 155 190 155 170 Z" fill="#140F08" stroke="url(#gold-bevel)" stroke-width="3" />
+
+    <!-- Sleepy Eye Slits (glowing gold) -->
+    <path d="M170 165 Q180 172 190 165" fill="none" stroke="url(#gold-bevel)" stroke-width="4" stroke-linecap="round" />
+    <path d="M210 165 Q220 172 230 165" fill="none" stroke="url(#gold-bevel)" stroke-width="4" stroke-linecap="round" />
+    
+    <!-- Nose & Mouth -->
+    <polygon points="200,172 194,180 206,180" fill="url(#gold-base)" stroke="url(#gold-bevel)" stroke-width="1" />
+    <path d="M192 188 Q200 194 208 188" fill="none" stroke="url(#gold-bevel)" stroke-width="3" stroke-linecap="round" />
+
+    <!-- Sapphire Jewel on Crown -->
+    <rect x="188" y="93" width="24" height="24" rx="4" fill="url(#sapphire)" stroke="url(#gold-bevel)" stroke-width="3" transform="rotate(45 200 105)" />
+    <!-- Little Crown Feathering -->
+    <path d="M175 90 L185 60 L200 75 L215 60 L225 90" fill="none" stroke="url(#gold-bevel)" stroke-width="4" stroke-linejoin="round" />
+  </g>
+</svg>

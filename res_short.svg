@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="100%" height="100%">
+  <defs>
+    <linearGradient id="gold-base" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4E3606" />
+      <stop offset="30%" stop-color="#A27D23" />
+      <stop offset="50%" stop-color="#FFE79A" />
+      <stop offset="70%" stop-color="#D4AF37" />
+      <stop offset="100%" stop-color="#3D2905" />
+    </linearGradient>
+    <linearGradient id="gold-bevel" x1="100%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" stop-color="#FFF8D6" />
+      <stop offset="50%" stop-color="#D4AF37" />
+      <stop offset="100%" stop-color="#7B5C0D" />
+    </linearGradient>
+    <linearGradient id="ruby" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FADBD8" />
+      <stop offset="50%" stop-color="#E74C3C" />
+      <stop offset="100%" stop-color="#78281F" />
+    </linearGradient>
+    <radialGradient id="goldGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FFA800" stop-opacity="0.3" />
+      <stop offset="100%" stop-color="#FFA800" stop-opacity="0" />
+    </radialGradient>
+    <radialGradient id="shieldBg" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#2D2214" />
+      <stop offset="100%" stop-color="#0E0803" />
+    </radialGradient>
+    <filter id="shadow">
+      <feDropShadow dx="0" dy="10" stdDeviation="8" flood-color="#000" flood-opacity="0.8" />
+    </filter>
+  </defs>
+
+  <g filter="url(#shadow)">
+    <!-- Medallion Shield -->
+    <circle cx="200" cy="200" r="170" fill="url(#shieldBg)" stroke="url(#gold-base)" stroke-width="8" />
+    <circle cx="200" cy="200" r="160" fill="url(#goldGlow)" />
+    <circle cx="200" cy="200" r="150" fill="none" stroke="url(#gold-bevel)" stroke-width="2" stroke-dasharray="10,8" />
+    <circle cx="200" cy="200" r="140" fill="none" stroke="url(#gold-base)" stroke-width="3" />
+
+    <!-- Jaguar Head -->
+    <path d="M140 120 L260 120 L280 170 L260 220 L200 270 L140 220 L120 170 Z" fill="url(#gold-base)" stroke="url(#gold-bevel)" stroke-width="5" stroke-linejoin="round" />
+    <path d="M146 128 L254 128 L270 170 L254 212 L200 258 L146 212 L130 170 Z" fill="url(#gold-bevel)" opacity="0.3" stroke="none" />
+
+    <!-- Ears -->
+    <path d="M140 120 L120 80 L160 100" fill="url(#gold-base)" stroke="url(#gold-bevel)" stroke-width="4" stroke-linejoin="round" />
+    <path d="M260 120 L280 80 L240 100" fill="url(#gold-base)" stroke="url(#gold-bevel)" stroke-width="4" stroke-linejoin="round" />
+
+    <!-- Glowing Ruby Eyes -->
+    <polygon points="160,150 180,160 160,165" fill="#E74C3C" stroke="url(#gold-bevel)" stroke-width="1.5" />
+    <polygon points="240,150 220,160 240,165" fill="#E74C3C" stroke="url(#gold-bevel)" stroke-width="1.5" />
+
+    <!-- Fangs & Snout -->
+    <ellipse cx="200" cy="185" rx="16" ry="12" fill="#140F08" stroke="url(#gold-bevel)" stroke-width="2" />
+    <path d="M188 195 L192 205 L196 195 M204 195 L208 205 L212 195" fill="none" stroke="url(#gold-bevel)" stroke-width="2" />
+
+    <!-- Red Lightning Bolt representing extreme speed -->
+    <path d="M200 275 L215 300 L195 300 L210 340" fill="none" stroke="#E74C3C" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" />
+
+    <!-- Ruby Gem on Head -->
+    <rect x="188" y="93" width="24" height="24" rx="4" fill="url(#ruby)" stroke="url(#gold-bevel)" stroke-width="3" transform="rotate(45 200 105)" />
+  </g>
+</svg>

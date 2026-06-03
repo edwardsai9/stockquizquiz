@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="100%" height="100%">
+  <defs>
+    <linearGradient id="gold-base" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4E3606" />
+      <stop offset="30%" stop-color="#A27D23" />
+      <stop offset="50%" stop-color="#FFE79A" />
+      <stop offset="70%" stop-color="#D4AF37" />
+      <stop offset="100%" stop-color="#3D2905" />
+    </linearGradient>
+    <linearGradient id="gold-bevel" x1="100%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" stop-color="#FFF8D6" />
+      <stop offset="50%" stop-color="#D4AF37" />
+      <stop offset="100%" stop-color="#7B5C0D" />
+    </linearGradient>
+    <linearGradient id="amethyst" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#D7BDE2" />
+      <stop offset="50%" stop-color="#9B59B6" />
+      <stop offset="100%" stop-color="#5B2C6F" />
+    </linearGradient>
+    <radialGradient id="goldGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FFA800" stop-opacity="0.3" />
+      <stop offset="100%" stop-color="#FFA800" stop-opacity="0" />
+    </radialGradient>
+    <radialGradient id="shieldBg" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#2D2214" />
+      <stop offset="100%" stop-color="#0E0803" />
+    </radialGradient>
+    <filter id="shadow">
+      <feDropShadow dx="0" dy="10" stdDeviation="8" flood-color="#000" flood-opacity="0.8" />
+    </filter>
+  </defs>
+
+  <g filter="url(#shadow)">
+    <!-- Medallion Shield -->
+    <circle cx="200" cy="200" r="170" fill="url(#shieldBg)" stroke="url(#gold-base)" stroke-width="8" />
+    <circle cx="200" cy="200" r="160" fill="url(#goldGlow)" />
+    <circle cx="200" cy="200" r="150" fill="none" stroke="url(#gold-bevel)" stroke-width="2" stroke-dasharray="10,8" />
+    <circle cx="200" cy="200" r="140" fill="none" stroke="url(#gold-base)" stroke-width="3" />
+
+    <!-- Owl Face Silhouette -->
+    <path d="M120 280 C90 220 100 130 130 110 L160 130 L200 100 L240 130 L270 110 C300 130 310 220 280 280 Z" fill="url(#gold-base)" stroke="url(#gold-bevel)" stroke-width="5" stroke-linejoin="round" />
+    <path d="M126 272 C98 215 108 135 134 118 L160 135 L200 108 L240 135 L266 118 C292 135 302 215 274 272 Z" fill="url(#gold-bevel)" opacity="0.3" stroke="none" />
+
+    <!-- Large circular spectacles (representing deep research) -->
+    <circle cx="160" cy="180" r="30" fill="#140F08" stroke="url(#gold-bevel)" stroke-width="4" />
+    <circle cx="240" cy="180" r="30" fill="#140F08" stroke="url(#gold-bevel)" stroke-width="4" />
+    <line x1="190" y1="180" x2="210" y2="180" stroke="url(#gold-bevel)" stroke-width="4" />
+
+    <!-- Glowing Gold Pupils -->
+    <circle cx="160" cy="180" r="8" fill="url(#gold-bevel)" />
+    <circle cx="240" cy="180" r="8" fill="url(#gold-bevel)" />
+
+    <!-- Beak -->
+    <polygon points="200,185 190,210 210,210" fill="url(#gold-base)" stroke="url(#gold-bevel)" stroke-width="2.5" />
+
+    <!-- Amethyst on Forehead -->
+    <rect x="188" y="113" width="24" height="24" rx="4" fill="url(#amethyst)" stroke="url(#gold-bevel)" stroke-width="3" transform="rotate(45 200 125)" />
+
+    <!-- Feather patterns -->
+    <path d="M150 240 Q200 260 250 240 M165 255 Q200 272 235 255" fill="none" stroke="url(#gold-bevel)" stroke-width="3" stroke-linecap="round" />
+  </g>
+</svg>

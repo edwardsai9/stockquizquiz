@@ -27,7 +27,7 @@
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Outfit:wght@400;500;600;700&family=Noto+Sans+TC:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Noto+Sans+TC:wght@400;500;700;900&display=swap" rel="stylesheet">
 
   <!-- CSS Style -->
   <link rel="stylesheet" href="style.css">
@@ -58,30 +58,14 @@
 
     <!-- ================= SCREEN: INTRO ================= -->
     <div id="screen-intro" class="screen active">
-      <div class="intro-badge" data-i18n="eyebrow">👑 BEHAVIORAL FINANCE ASSESSMENT</div>
       <h1 class="intro-title" data-i18n="title">最適合你的<br><span class="gold-gradient-text">買股票策略</span>是什麼？</h1>
-      <p class="intro-sub" data-i18n="subtitle">
-        市場從不缺乏資訊，缺乏的是對自我的認知。本測評基於現代<b>行為金融學（Behavioral Finance）</b>決策模型，透過 10 個核心交易場景，量化你的風險偏好與認知偏差，為你精準對接最契合的股票交易哲學。
-      </p>
-      
-      <div class="intro-stats">
-        <div class="stat-item">
-          <div class="stat-val" data-i18n="stat_precision_val">98.4%</div>
-          <div class="stat-lbl" data-i18n="stat_precision_lbl">學術模型精準度</div>
-        </div>
-        <div class="divider"></div>
-        <div class="stat-item">
-          <div class="stat-val" id="page-counter">14,205+</div>
-          <div class="stat-lbl" data-i18n="stat_completed_lbl">已完成專業測評</div>
-        </div>
-      </div>
+
+      <!-- Welcome Cover Illustration (placed above CTA) -->
+      <img class="intro-illust" src="intro-hero-v2.png" alt="Behavioral Finance Cover">
 
       <button id="btn-start" class="cta-btn" onclick="startQuiz()" data-i18n="btn_start">
         開始專業測評 →
       </button>
-
-      <!-- Welcome Cover Illustration (placed below CTA to avoid blocking it on mobile) -->
-      <img class="intro-illust" src="intro-hero.jpg" alt="Behavioral Finance Cover">
 
       <div class="intro-disclaimer" data-i18n="disclaimer">
         ※ 本測評由量化心理模型提供支持，測評結果僅供學術與投資性格剖析參考，不構成實際投資招攬或顧問建議。
@@ -138,46 +122,19 @@
         <h2 class="result-title gold-gradient-text" id="res-title">價值投資策略 (Value Investing)</h2>
         <div class="result-tagline" id="res-tagline">「以商業洞察為核心，穩健複利為盾的巴菲特信徒」</div>
 
-        <div class="result-metrics">
-          <div class="metric-box">
-            <span class="m-lbl" data-i18n="metric_fit">模型適配度</span>
-            <span class="m-val" id="res-fit">96.8%</span>
-          </div>
-          <div class="metric-box">
-            <span class="m-lbl" data-i18n="metric_vol">回測波動性</span>
-            <span class="m-val" id="res-vol">中等偏低</span>
-          </div>
-        </div>
-
-        <!-- Radar Chart Container -->
-        <div class="radar-container">
-          <canvas id="radar-canvas" width="300" height="300"></canvas>
+        <!-- Result Sticker Container -->
+        <div class="result-img-container">
+          <img id="result-sticker" src="" alt="Result Sticker">
         </div>
 
         <!-- Strategy Analysis Details -->
         <div class="strategy-analysis">
           <div class="section-title">
-            <span class="bullet">✦</span> <span data-i18n="section_philosophy">策略哲學深度解析</span>
+            <span class="bullet">✦</span> <span data-i18n="section_philosophy">投資人格「內心大白話」</span>
           </div>
           <p class="strategy-desc" id="res-desc">
             你是一位極其理性的馬拉松選手，深信「價格圍繞價值波動」的核心原理。你不隨短期的市場情緒起舞，寧可花費大量精力研究企業基本面，在安全邊際充足時重倉買入，用長期耐心與時間對抗波動。
           </p>
-
-          <div class="dimension-grid">
-            <div class="dim-card">
-              <span class="dim-lbl gold-gradient-text" data-i18n="label_strength">🎯 核心優勢</span>
-              <p class="dim-txt" id="res-strength">具備極強的逆向思考與情緒控制力，能在市場恐慌時保持冷靜，發掘被低估的優質資產，長線勝率高。</p>
-            </div>
-            <div class="dim-card">
-              <span class="dim-lbl gold-gradient-text" data-i18n="label_weakness">⚠️ 潛在盲區</span>
-              <p class="dim-txt" id="res-weakness">容易陷入「價值陷阱」，即買入基本面惡化卻看似便宜的股票；且需要耗費龐大的分析精力，資金使用效率可能偏低。</p>
-            </div>
-          </div>
-
-          <div class="allocation-card">
-            <span class="dim-lbl gold-gradient-text" data-i18n="label_allocation">💼 推薦資產配置建議</span>
-            <p class="dim-txt" id="res-allocation">50% 優質行業龍頭股 + 30% 具備寬廣護城河的成長型股票 + 20% 高評級債券或防禦型現金準備。</p>
-          </div>
         </div>
 
         <div class="card-footer" data-i18n="card_footer">
